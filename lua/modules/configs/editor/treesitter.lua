@@ -52,6 +52,17 @@ return vim.schedule_wrap(function()
 					["[M"] = "@class.outer",
 				},
 			},
+			swap = {
+				enable = true,
+				swap_next = {
+					["<leader>a"] = "@parameter.inner",
+					["<leader>m"] = "@function.outer",
+				},
+				swap_previous = {
+					["<leader>A"] = "@parameter.inner",
+					["<leader>M"] = "@function.outer",
+				},
+			},
 		},
 		indent = { enable = true },
 		matchup = { enable = true },

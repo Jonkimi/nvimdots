@@ -87,6 +87,7 @@ editor["MagicDuck/grug-far.nvim"] = {
 	lazy = true,
 	cmd = "GrugFar",
 	config = require("editor.grug-far"),
+	version = "1.6.3",
 }
 ----------------------------------------------------------------------
 --                  :treesitter related plugins                    --

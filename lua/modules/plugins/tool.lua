@@ -18,6 +18,7 @@ tool["Bekaboo/dropbar.nvim"] = {
 		"nvim-tree/nvim-web-devicons",
 		"nvim-telescope/telescope-fzf-native.nvim",
 	},
+	version = "v12.0.2"
 }
 tool["nvim-tree/nvim-tree.lua"] = {
 	lazy = true,
