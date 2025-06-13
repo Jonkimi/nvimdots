@@ -1,4 +1,4 @@
-vim.notify("Attempting to load user settings", vim.log.levels.INFO, { title = "user settings load" })
+-- vim.notify("Attempting to load user settings", vim.log.levels.INFO, { title = "user settings load" })
 -- Please check `lua/core/settings.lua` to view the full list of configurable settings
 local settings = {}
 
@@ -11,7 +11,7 @@ settings["use_copilot"] = false
 -- enable codeium
 
 settings["disabled_plugins"] = {
-	"copilot"	-- "local-highlight"
+	"copilot", -- "local-highlight"
 }
 
 settings["colorscheme"] = "catppuccin"
@@ -27,9 +27,11 @@ settings["lsp_deps"] = function(defaults)
 		"pylsp",
 		"tailwindcss",
 		-- "denols", -- typescript language server
-		"ts_ls"
+		"ts_ls",
+		"vuels",
 	}
 end
 
+-- vim.notify("User settings loaded", vim.log.levels.INFO, { title = "user settings load" })
 
 return settings
