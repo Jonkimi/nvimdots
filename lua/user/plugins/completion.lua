@@ -4,8 +4,6 @@ local completion = {}
 completion["Exafunction/windsurf.nvim"] = {
 	event = "BufEnter",
 	dependencies = {
-			enable_cmp_source = false,
-			virtual_text = {
 		"nvim-lua/plenary.nvim",
 		"hrsh7th/nvim-cmp",
 	},
