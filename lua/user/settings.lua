@@ -32,6 +32,11 @@ settings["lsp_deps"] = function(defaults)
 	}
 end
 
+-- add null-ls deps
+settings["null_ls_deps"] = {
+	"black"
+}
+
 -- vim.notify("User settings loaded", vim.log.levels.INFO, { title = "user settings load" })
 
 return settings

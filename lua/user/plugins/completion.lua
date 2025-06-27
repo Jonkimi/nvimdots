@@ -2,13 +2,15 @@ local completion = {}
 -- local use_copilot = require("core.settings").use_copilot
 
 completion["Exafunction/windsurf.nvim"] = {
-	event = 'BufEnter',
+	event = "BufEnter",
 	dependencies = {
-        "nvim-lua/plenary.nvim",
-        "hrsh7th/nvim-cmp",
-    },
-    config = function()
-        require("codeium").setup({
+			enable_cmp_source = false,
+			virtual_text = {
+		"nvim-lua/plenary.nvim",
+		"hrsh7th/nvim-cmp",
+	},
+	config = function()
+		require("codeium").setup({
 			-- Optionally disable cmp source if using virtual text only
 			enable_cmp_source = false,
 			virtual_text = {
@@ -19,13 +21,13 @@ completion["Exafunction/windsurf.nvim"] = {
 				manual = false,
 				-- A mapping of filetype to true or false, to enable virtual text.
 				filetypes = {
-					lua= true,
-					python= true,
-					javascript= true,
-					typescript= true,
-					vue= true,
-					html= true,
-					css= true,		
+					lua = true,
+					python = true,
+					javascript = true,
+					typescript = true,
+					vue = true,
+					html = true,
+					css = true,
 				},
 				-- Whether to enable virtual text of not for filetypes not specifically listed above.
 				default_filetype_enabled = false,
@@ -38,7 +40,7 @@ completion["Exafunction/windsurf.nvim"] = {
 				-- Set to false to disable all key bindings for managing completions.
 				map_keys = true,
 				-- The key to press when hitting the accept keybinding but no completion is showing.
-				-- Defaults to \t normally or <c-n> when a popup is showing. 
+				-- Defaults to \t normally or <c-n> when a popup is showing.
 				accept_fallback = nil,
 				-- Key bindings for managing completions in virtual text mode.
 				key_bindings = {
@@ -54,12 +56,11 @@ completion["Exafunction/windsurf.nvim"] = {
 					next = "<M-]>",
 					-- Cycle to the previous completion.
 					prev = "<M-[>",
-				}
-			}
-        })
-    end
+				},
+			},
+		})
+	end,
 }
-
 
 -- https://github.com/Exafunction/windsurf.vim
 -- completion["Exafunction/windsurf.vim"] = {
