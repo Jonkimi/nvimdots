@@ -11,6 +11,7 @@ completion["Exafunction/windsurf.nvim"] = {
 		require("codeium").setup({
 			-- Optionally disable cmp source if using virtual text only
 			enable_cmp_source = false,
+			enable_chat = false,
 			virtual_text = {
 				enabled = true,
 				-- These are the defaults
