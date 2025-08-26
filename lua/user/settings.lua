@@ -16,6 +16,14 @@ settings["disabled_plugins"] = {
 
 settings["colorscheme"] = "catppuccin"
 
+-- manually format
+settings["format_on_save"] = false
+
+settings["treesitter_deps"] = {
+	"toml",
+	"java",
+}
+
 -- override default lsp deps
 settings["lsp_deps"] = function(defaults)
 	return {
@@ -34,7 +42,7 @@ end
 
 -- add null-ls deps
 settings["null_ls_deps"] = {
-	"black"
+	"black",
 }
 
 -- vim.notify("User settings loaded", vim.log.levels.INFO, { title = "user settings load" })
