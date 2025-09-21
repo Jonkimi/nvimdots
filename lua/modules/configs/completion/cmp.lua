@@ -136,8 +136,22 @@ return function()
 		mapping = cmp.mapping.preset.insert({
 			["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select }),
 			["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select }),
-			["<C-d>"] = cmp.mapping.scroll_docs(-4),
-			["<C-f>"] = cmp.mapping.scroll_docs(4),
+			-- ["<C-d>"] = cmp.mapping.scroll_docs(-4),
+			-- ["<C-f>"] = cmp.mapping.scroll_docs(4),
+			["<C-d>"] = cmp.mapping(function(fallback)
+				if cmp.visible() then
+					cmp.scroll_docs(-4)
+				else
+					fallback()
+				end
+			end, { "i", "s" }),
+			["<C-f>"] = cmp.mapping(function(fallback)
+				if cmp.visible() then
+					cmp.scroll_docs(4)
+				else
+					fallback()
+				end
+			end, { "i", "s" }),
 			["<C-w>"] = cmp.mapping.abort(),
 			["<Tab>"] = cmp.mapping(function(fallback)
 				if cmp.visible() then
