@@ -1,5 +1,4 @@
--- vim.notify("Attempting to load user settings", vim.log.levels.INFO, { title = "user settings load" })
--- Please check `lua/core/settings.lua` to view the full list of configurable settings
+-- vim.notify("Attempting to load user settings", vim.log.levels.INFO, { title = "user settings load" }) Please check `lua/core/settings.lua` to view the full list of configurable settings
 local settings = {}
 
 -- Examples

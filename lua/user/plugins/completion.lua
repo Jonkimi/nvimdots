@@ -27,6 +27,9 @@ completion["Exafunction/windsurf.nvim"] = {
 					vue = true,
 					html = true,
 					css = true,
+					java = true,
+					cpp = true,
+					c = true,
 				},
 				-- Whether to enable virtual text of not for filetypes not specifically listed above.
 				default_filetype_enabled = false,
@@ -89,10 +92,10 @@ completion["yetone/avante.nvim"] = {
 			-- 	endpoint = "https://bh.jonkimi.com/v1",
 			-- 	model = "gpt-4.1"
 			-- }
-			-- gemini = {
-			-- 	endpoint = "https://gemini-proxy.jonkimi.com",
-			-- 	model = "gemini-"
-			-- }
+			gemini = {
+				endpoint = "https://gemini-proxy.jonkimi.com",
+				model = "gemini-2.5-flash"
+			}
 		},
 	},
 	dependencies = {
