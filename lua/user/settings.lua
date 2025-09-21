@@ -36,6 +36,7 @@ settings["lsp_deps"] = function(defaults)
 		-- "denols", -- typescript language server
 		"ts_ls",
 		"vuels",
+		"emmet_language_server",
 	}
 end
 
