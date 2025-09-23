@@ -12,8 +12,8 @@ settings["use_copilot"] = false
 settings["disabled_plugins"] = {
 	"copilot", -- "local-highlight"
 }
-
-settings["colorscheme"] = "catppuccin"
+-- catppuccin
+settings["colorscheme"] = "catppuccin-latte"
 
 -- manually format
 settings["format_on_save"] = false
@@ -34,8 +34,11 @@ settings["lsp_deps"] = function(defaults)
 		"pylsp",
 		"tailwindcss",
 		-- "denols", -- typescript language server
-		"ts_ls",
-		"vuels",
+		-- "ts_ls",
+		-- "vuels", -- vetur
+		"vtsls",
+		"volar", -- volar 2.2.12
+		-- "vue_ls", -- volar 3
 		"emmet_language_server",
 	}
 end
