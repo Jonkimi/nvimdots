@@ -18,7 +18,7 @@ lang["ray-x/go.nvim"] = {
 lang["mrcjkb/rustaceanvim"] = {
 	lazy = true,
 	ft = "rust",
-	version = "*",
+	version = "v5.26.0",
 	init = require("lang.rust"),
 	dependencies = { "nvim-lua/plenary.nvim" },
 }
