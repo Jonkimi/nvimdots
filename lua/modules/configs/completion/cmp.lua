@@ -156,6 +156,9 @@ return function()
 			["<Tab>"] = cmp.mapping(function(fallback)
 				if cmp.visible() then
 					cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
+				-- fixbug: if windsurf visual text is shown, make Tab not fallback to luasnip
+				elseif require('codeium.virtual_text').get_current_completion_item() then
+					fallback()
 				elseif require("luasnip").expand_or_locally_jumpable() then
 					require("luasnip").expand_or_jump()
 				else
