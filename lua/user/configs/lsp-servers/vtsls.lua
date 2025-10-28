@@ -39,25 +39,25 @@ return {
 				},
 			},
 		},
-	},
-	typescript = {
-		inlayHints = {
-			enumMemberValues = {
-				enabled = true,
-			},
-			functionLikeReturnTypes = {
-				enabled = true,
-			},
-			parameterNames = { enabled = "all" },
-			parameterTypes = {
-				enabled = true,
-				suppressWhenArgumentMatchesName = true,
-			},
-			propertyDeclarationTypes = {
-				enabled = true,
-			},
-			variableTypes = {
-				enabled = true,
+		typescript = {
+			inlayHints = {
+				enumMemberValues = {
+					enabled = true,
+				},
+				functionLikeReturnTypes = {
+					enabled = true,
+				},
+				propertyDeclarationTypes = {
+					enabled = true,
+				},
+				parameterTypes = {
+					enabled = true,
+					suppressWhenArgumentMatchesName = true,
+				},
+				variableTypes = {
+					enabled = true,
+				},
+				parameterNames = { enabled = "all" },
 			},
 		},
 	},
