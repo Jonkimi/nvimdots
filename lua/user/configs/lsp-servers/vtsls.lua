@@ -10,80 +10,57 @@ local vue_plugin = {
 	name = "@vue/typescript-plugin",
 	location = vue_language_server_path,
 	languages = { "vue" },
+	enableForWorkspaceTypeScriptVersions = true,
 	configNamespace = "typescript",
 }
 -- vim.notify(vue_language_server_path)
 return {
-	default_config = {
-		cmd = { "vtsls", "--stdio" },
+	cmd = { "vtsls", "--stdio" },
 
-		filetypes = {
-			"vue",
-			"javascript",
-			"javascriptreact",
-			"javascript.jsx",
-			"typescript",
-			"typescriptreact",
-			"typescript.tsx",
-		},
-		init_options = {
-			typescript = {
-				tsdk = typescript_path,
-			},
-		},
-		settings = {
-			vtsls = {
-				tsserver = {
-					globalPlugins = {
-						{
-							name = "@vue/typescript-plugin",
-							location = vue_language_server_path,
-							-- location = vue_language_server_path .. "/node_modules/@vue/typescript-plugin",
-							languages = { "vue" },
-							configNamespace = "typescript",
-						},
-						-- vue_plugin,
-					},
-				},
-			},
-		},
+	filetypes = {
+		"vue",
+		"javascript",
+		"javascriptreact",
+		"javascript.jsx",
+		"typescript",
+		"typescriptreact",
+		"typescript.tsx",
+	},
+	init_options = {
 		typescript = {
-			inlayHints = {
-				enumMemberValues = {
-					enabled = true,
-				},
-				functionLikeReturnTypes = {
-					enabled = true,
-				},
-				parameterNames = { enabled = "all" },
-				parameterTypes = {
-					enabled = true,
-					suppressWhenArgumentMatchesName = true,
-				},
-				propertyDeclarationTypes = {
-					enabled = true,
-				},
-				variableTypes = {
-					enabled = true,
+			tsdk = typescript_path,
+		},
+	},
+	settings = {
+		vtsls = {
+			tsserver = {
+				globalPlugins = {
+					vue_plugin,
 				},
 			},
 		},
-		root_dir = util.root_pattern("tsconfig.json", "package.json", "jsconfig.json", ".git"),
-		single_file_support = true,
 	},
-	docs = {
-		description = [[
-https://github.com/yioneko/vtsls
-
-`vtsls` can be installed with npm:
-```sh
-npm install -g @vtsls/language-server
-```
-
-To configure a TypeScript project, add a
-[`tsconfig.json`](https://www.typescriptlang.org/docs/handbook/tsconfig-json.html)
-or [`jsconfig.json`](https://code.visualstudio.com/docs/languages/jsconfig) to
-the root of your project.
-]],
+	typescript = {
+		inlayHints = {
+			enumMemberValues = {
+				enabled = true,
+			},
+			functionLikeReturnTypes = {
+				enabled = true,
+			},
+			parameterNames = { enabled = "all" },
+			parameterTypes = {
+				enabled = true,
+				suppressWhenArgumentMatchesName = true,
+			},
+			propertyDeclarationTypes = {
+				enabled = true,
+			},
+			variableTypes = {
+				enabled = true,
+			},
+		},
 	},
+	root_dir = util.root_pattern("tsconfig.json", "package.json", "jsconfig.json", ".git"),
+	single_file_support = true,
 }
