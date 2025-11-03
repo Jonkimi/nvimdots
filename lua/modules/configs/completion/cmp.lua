@@ -155,7 +155,9 @@ return function()
 			["<C-w>"] = cmp.mapping.abort(),
 			["<Tab>"] = cmp.mapping(function(fallback)
 				if cmp.visible() then
-					cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
+				-- 	cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
+				-- use Tab accept first item as default
+					cmp.confirm({ behavior = cmp.ConfirmBehavior.Insert, select = true })
 				-- fixbug: if windsurf visual text is shown, make Tab not fallback to luasnip
 				elseif require('codeium.virtual_text').get_current_completion_item() then
 					fallback()
