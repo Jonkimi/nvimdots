@@ -9,6 +9,13 @@ tool["jghauser/follow-md-links.nvim"] = {
     dependencies = { "nvim-treesitter/nvim-treesitter" },
 }
 
+tool["attilarepka/header.nvim"] = {
+	config =  true,
+	opts = {
+		author = 'Jonkimi'
+	}
+}
+
 -- tool["altermo/ultimate-autopair.nvim"] = {
 --     event={'InsertEnter','CmdlineEnter'},
 --     branch='v0.6', --recommended as each new version will have breaking changes
