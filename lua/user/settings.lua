@@ -21,6 +21,10 @@ settings["format_on_save"] = false
 settings["treesitter_deps"] = {
 	"toml",
 	"java",
+	"rust",
+	"tsx",
+	"vue",
+	"xml",
 }
 
 -- override default lsp deps
