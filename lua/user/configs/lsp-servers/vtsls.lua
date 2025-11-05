@@ -33,6 +33,8 @@ return {
 	},
 	settings = {
 		vtsls = {
+			-- fix https://github.com/LazyVim/LazyVim/discussions/3365#discussioncomment-9609508
+			autoUseWorkspaceTsdk = true,
 			tsserver = {
 				globalPlugins = {
 					vue_plugin,
