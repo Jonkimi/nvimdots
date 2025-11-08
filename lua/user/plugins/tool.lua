@@ -3,17 +3,17 @@ local tool = {}
 -- 'jghauser/follow-md-links.nvim'
 -- https://github.com/jghauser/follow-md-links.nvim
 tool["jghauser/follow-md-links.nvim"] = {
-    lazy = true,
-    -- config = require("tool.follow-md-links"),
-    ft = "markdown",
-    dependencies = { "nvim-treesitter/nvim-treesitter" },
+	lazy = true,
+	-- config = require("tool.follow-md-links"),
+	ft = "markdown",
+	dependencies = { "nvim-treesitter/nvim-treesitter" },
 }
 
 tool["attilarepka/header.nvim"] = {
-	config =  true,
+	config = true,
 	opts = {
-		author = 'Jonkimi'
-	}
+		author = "Jonkimi",
+	},
 }
 
 -- tool["altermo/ultimate-autopair.nvim"] = {
@@ -25,14 +25,24 @@ tool["attilarepka/header.nvim"] = {
 -- }
 
 tool["windwp/nvim-autopairs"] = {
-    event = "InsertEnter",
-    config = true,
-    -- opts = {
-    --     check_ts = true,
-    --     -- disable_filetype = { "TelescopePrompt" },
-    -- },
-    -- use opts = {} for passing setup options
-    -- this is equivalent to setup({}) function
+	event = "InsertEnter",
+	config = true,
+	-- opts = {
+	--     check_ts = true,
+	--     -- disable_filetype = { "TelescopePrompt" },
+	-- },
+	-- use opts = {} for passing setup options
+	-- this is equivalent to setup({}) function
 }
 
+tool["m4xshen/hardtime.nvim"] = {
+	lazy = false,
+	dependencies = { "MunifTanjim/nui.nvim" },
+	opts = {
+		restricted_keys = {
+			["<C-N>"] = {}, -- 移除 <C-N> 的限制
+			["C-P"] = {},
+		},
+	},
+}
 return tool
