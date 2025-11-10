@@ -63,6 +63,12 @@ return {
 			},
 		},
 		typescript = {
+			tsserver = {
+				-- fix https://github.com/microsoft/vscode/issues/212731
+				-- make tsserver memory limit greater than 4GB
+				maxTsServerMemory = 8192,
+				nodePath = "node"
+			},
 			inlayHints = {
 				enumMemberValues = {
 					enabled = true,
