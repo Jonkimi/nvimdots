@@ -14,11 +14,11 @@ local mappings = {
 
 		-- Builtins: Insert mode
 		["i|<C-u>"] = map_cmd("<C-G>u<C-U>"):with_noremap():with_desc("edit: Delete previous block"),
-		-- ["i|<C-k>"] = map_cmd("<C-o>D"):with_noremap():with_desc("edit: Delete next block"),
+		["i|<C-k>"] = map_cmd("<C-o>D"):with_noremap():with_desc("edit: Delete next block"),
 		["i|<C-b>"] = map_cmd("<Left>"):with_noremap():with_desc("edit: Move cursor to left"),
 		["i|<C-f>"] = map_cmd("<Right>"):with_noremap():with_desc("edit: Move cursor to right"),
-		["i|<C-j>"] = map_cmd("<Down>"):with_noremap():with_desc("edit: Move cursor to down"),
-		["i|<C-k>"] = map_cmd("<Up>"):with_noremap():with_desc("edit: Move cursor to up"),
+		["i|<C-n>"] = map_cmd("<Down>"):with_noremap():with_desc("edit: Move cursor to down"),
+		["i|<C-p>"] = map_cmd("<Up>"):with_noremap():with_desc("edit: Move cursor to up"),
 		["i|<C-a>"] = map_cmd("<ESC>^i"):with_noremap():with_desc("edit: Move cursor to line start"),
 		["i|<C-e>"] = map_cmd("<End>"):with_noremap():with_desc("edit: End"),
 		["i|<C-d>"] = map_cmd("<Del>"):with_noremap():with_desc("edit: Delete"),
