@@ -45,4 +45,33 @@ tool["m4xshen/hardtime.nvim"] = {
 		},
 	},
 }
+
+-- https://github.com/hakonharnes/img-clip.nvim
+tool["HakonHarnes/img-clip.nvim"] = {
+	event = "VeryLazy",
+	opts = {
+		default = {
+			drag_and_drop = {
+				enabled = false, -- 默认禁用
+			},
+		},
+		custom = {
+			{
+				trigger = function()
+					-- 指定文件类型启用
+					local allowed_filetypes = { "markdown", "org", "vimwiki", "AvanteInput" }
+					local current_ft = vim.bo.filetype
+					return vim.tbl_contains(allowed_filetypes, current_ft)
+				end,
+			},
+			drag_and_drop = {
+				enabled = true,
+			},
+		},
+	},
+	keys = {
+		-- suggested keymap
+		-- { "<leader>p", "<cmd>PasteImage<cr>", desc = "Paste image from system clipboard" },
+	},
+}
 return tool
