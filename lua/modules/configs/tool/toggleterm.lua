@@ -8,11 +8,16 @@ return function()
 				return vim.o.columns * 0.40
 			end
 		end,
-		on_open = function()
+		on_open = function(term)
 			-- Prevent infinite calls from freezing neovim.
 			-- Only set these options specific to this terminal buffer.
 			vim.api.nvim_set_option_value("foldmethod", "manual", { scope = "local" })
 			vim.api.nvim_set_option_value("foldexpr", "0", { scope = "local" })
+			-- 覆盖默认的 winbar，只显示当前终端的信息
+			if vim.fn.exists("+winbar") == 1 and term.window and vim.api.nvim_win_is_valid(term.window) then
+				local name = term.id .. ':' .. term:_display_name()
+				vim.wo[term.window].winbar = ' ' .. name
+    end
 		end,
 		highlights = {
 			Normal = {
@@ -37,5 +42,11 @@ return function()
 		direction = "horizontal",
 		close_on_exit = true, -- close the terminal window when the process exits
 		shell = vim.o.shell, -- change the default shell
+		winbar = {
+			enabled = true,
+			-- name_formatter = function(term)
+			-- 	return term.id .. ':' .. term:_display_name()
+			-- end
+		}
 	})
 end
