@@ -93,8 +93,9 @@ completion["yetone/avante.nvim"] = {
 			-- 	model = "gpt-4.1"
 			-- }
 			gemini = {
-				endpoint = "https://gemini-proxy.jonkimi.com",
-				model = "gemini-2.5-flash"
+				endpoint = "https://gemini-proxy.jonkimi.com/v1beta/models",
+				model = "gemini-2.0-flash",
+				temperature = 0.3,
 			}
 		},
 	},
