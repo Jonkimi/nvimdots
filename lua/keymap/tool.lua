@@ -30,7 +30,9 @@ local mappings = {
 		["n|<leader>r"] = map_cu([[%SnipRun]]):with_noremap():with_silent():with_desc("tool: Run code by file"),
 
 		-- Plugin: toggleterm
-		["t|<Esc>"] = map_cmd([[<C-\><C-n>]]):with_noremap():with_silent(), -- switch to normal mode in terminal.
+		-- <Esc> conflict with shortcut of return to files panel in lazygit
+		-- <Esc><Esc> is not simple
+		["t|<C-q>"] = map_cmd([[<C-\><C-n>]]):with_noremap():with_silent(), -- switch to normal mode in terminal.
 		["n|<C-\\>"] = map_cmd('<Cmd>execute (v:count > 0 ? v:count : "") . "ToggleTerm direction=horizontal"<CR>')
 			:with_noremap()
 			:with_silent()
