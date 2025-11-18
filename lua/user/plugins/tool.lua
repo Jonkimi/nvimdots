@@ -10,6 +10,8 @@ tool["jghauser/follow-md-links.nvim"] = {
 }
 
 tool["attilarepka/header.nvim"] = {
+	lazy = true,
+	event = "VeryLazy",
 	config = true,
 	opts = {
 		author = "Jonkimi",
@@ -46,7 +48,7 @@ tool["kylechui/nvim-surround"] = {
 }
 
 tool["m4xshen/hardtime.nvim"] = {
-	lazy = false,
+	event = "VeryLazy",
 	dependencies = { "MunifTanjim/nui.nvim" },
 	opts = {
 		restricted_keys = {

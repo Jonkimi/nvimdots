@@ -2,7 +2,7 @@ local ui = {}
 
 ui["goolord/alpha-nvim"] = {
 	lazy = true,
-	event = "BufWinEnter",
+	event = "VimEnter",
 	config = require("ui.alpha"),
 }
 ui["akinsho/bufferline.nvim"] = {
@@ -28,12 +28,12 @@ ui["j-hui/fidget.nvim"] = {
 }
 ui["lewis6991/gitsigns.nvim"] = {
 	lazy = true,
-	event = { "CursorHold", "CursorHoldI" },
+	event = "BufReadPost",
 	config = require("ui.gitsigns"),
 }
 ui["lukas-reineke/indent-blankline.nvim"] = {
 	lazy = true,
-	event = { "CursorHold", "CursorHoldI" },
+	event = "BufReadPost",
 	config = require("ui.indent-blankline"),
 }
 ui["nvim-lualine/lualine.nvim"] = {
@@ -43,7 +43,7 @@ ui["nvim-lualine/lualine.nvim"] = {
 }
 ui["karb94/neoscroll.nvim"] = {
 	lazy = true,
-	event = { "CursorHold", "CursorHoldI" },
+	event = "VeryLazy",
 	config = require("ui.neoscroll"),
 }
 ui["rcarriga/nvim-notify"] = {
@@ -53,17 +53,17 @@ ui["rcarriga/nvim-notify"] = {
 }
 ui["folke/paint.nvim"] = {
 	lazy = true,
-	event = { "CursorHold", "CursorHoldI" },
+	event = "VeryLazy",
 	config = require("ui.paint"),
 }
 ui["mrjones2014/smart-splits.nvim"] = {
 	lazy = true,
-	event = { "CursorHoldI", "CursorHold" },
+	event = "VeryLazy",
 	config = require("ui.splits"),
 }
 ui["folke/todo-comments.nvim"] = {
 	lazy = true,
-	event = { "CursorHold", "CursorHoldI" },
+	event = "VeryLazy",
 	config = require("ui.todo"),
 	dependencies = { "nvim-lua/plenary.nvim" },
 }

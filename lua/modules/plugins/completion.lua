@@ -3,7 +3,7 @@ local use_copilot = require("core.settings").use_copilot
 
 completion["neovim/nvim-lspconfig"] = {
 	lazy = true,
-	event = { "CursorHold", "CursorHoldI" },
+	event = { "BufReadPre", "BufNewFile" },
 	config = require("completion.lsp"),
 	dependencies = {
 		{ "williamboman/mason.nvim" },
@@ -32,7 +32,7 @@ completion["joechrisellis/lsp-format-modifications.nvim"] = {
 }
 completion["nvimtools/none-ls.nvim"] = {
 	lazy = true,
-	event = { "CursorHold", "CursorHoldI" },
+	event = "LspAttach",
 	config = require("completion.null-ls"),
 	dependencies = {
 		"nvim-lua/plenary.nvim",

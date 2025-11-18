@@ -2,7 +2,9 @@ local completion = {}
 -- local use_copilot = require("core.settings").use_copilot
 
 completion["Exafunction/windsurf.nvim"] = {
-	event = "BufEnter",
+	lazy = true,
+	-- event = "VeryLazy",
+	cmd = {"Codeium"},
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 		"hrsh7th/nvim-cmp",
@@ -80,7 +82,9 @@ completion["yetone/avante.nvim"] = {
 			return "make BUILD_FROM_SOURCE=true"
 		end
 	end,
-	event = "VeryLazy",
+	lazy = true,
+	-- event = "VeryLazy",
+	cmd = { "AvanteAsk", "AvanteChat" }, -- 改用命令触发
 	version = false, -- Never set this value to "*"! Never!
 	---@module 'avante'
 	---@type avante.Config

@@ -36,12 +36,12 @@ editor["ojroques/nvim-bufdel"] = {
 -- But as usual, you can always tweak the plugin to your liking.
 editor["folke/flash.nvim"] = {
 	lazy = true,
-	event = { "CursorHold", "CursorHoldI" },
+	event = "VeryLazy",
 	config = require("editor.flash"),
 }
 editor["numToStr/Comment.nvim"] = {
 	lazy = true,
-	event = { "CursorHold", "CursorHoldI" },
+	event = "VeryLazy",
 	config = require("editor.comment"),
 }
 editor["sindrets/diffview.nvim"] = {
@@ -51,7 +51,7 @@ editor["sindrets/diffview.nvim"] = {
 }
 editor["echasnovski/mini.align"] = {
 	lazy = true,
-	event = { "CursorHold", "CursorHoldI" },
+	event = "VeryLazy",
 	config = require("editor.align"),
 }
 editor["echasnovski/mini.cursorword"] = {
@@ -62,12 +62,12 @@ editor["echasnovski/mini.cursorword"] = {
 editor["smoka7/hop.nvim"] = {
 	lazy = true,
 	version = "*",
-	event = { "CursorHold", "CursorHoldI" },
+	event = "VeryLazy",
 	config = require("editor.hop"),
 }
 editor["brenoprata10/nvim-highlight-colors"] = {
 	lazy = true,
-	event = { "CursorHold", "CursorHoldI" },
+	event = "VeryLazy",
 	config = require("editor.highlight-colors"),
 }
 editor["romainl/vim-cool"] = {
@@ -77,7 +77,7 @@ editor["romainl/vim-cool"] = {
 editor["lambdalisue/suda.vim"] = {
 	lazy = true,
 	cmd = { "SudaRead", "SudaWrite" },
-	init = require("editor.suda"),
+	config = require("editor.suda"),
 }
 editor["tpope/vim-sleuth"] = {
 	lazy = true,

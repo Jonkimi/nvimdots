@@ -12,7 +12,8 @@ tool["tpope/vim-fugitive"] = {
 -- 	config = require("tool.fcitx5"),
 -- }
 tool["Bekaboo/dropbar.nvim"] = {
-	lazy = false,
+	lazy = true,
+	event = "BufReadPost",
 	config = require("tool.dropbar"),
 	dependencies = {
 		"nvim-tree/nvim-web-devicons",
@@ -63,7 +64,7 @@ tool["folke/trouble.nvim"] = {
 }
 tool["folke/which-key.nvim"] = {
 	lazy = true,
-	event = { "CursorHold", "CursorHoldI" },
+	event = "VeryLazy",
 	config = require("tool.which-key"),
 }
 tool["gelguy/wilder.nvim"] = {
@@ -94,7 +95,7 @@ tool["nvim-telescope/telescope.nvim"] = {
 		},
 		{
 			"ahmedkhalf/project.nvim",
-			event = { "CursorHold", "CursorHoldI" },
+			event = "VeryLazy",
 			config = require("tool.project"),
 		},
 		{
