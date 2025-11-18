@@ -46,6 +46,28 @@ tool["m4xshen/hardtime.nvim"] = {
 	},
 }
 
+-- customize vim.ui.* implementation for plugins like NvimTree using vim.ui.*
+-- https://github.com/stevearc/dressing.nvim
+tool["stevearc/dressing.nvim"] = {
+	event = "VeryLazy",
+	opts = {
+		input = {
+			mappings = {
+				n = {
+					["<Esc>"] = "Close",
+					["<CR>"] = "Confirm",
+				},
+				i = {
+					["<C-c>"] = "Close",
+					["<CR>"] = "Confirm",
+					["<C-p>"] = "HistoryPrev",
+					["<C-n>"] = "HistoryNext",
+				},
+			},
+		},
+	},
+}
+
 -- https://github.com/hakonharnes/img-clip.nvim
 tool["HakonHarnes/img-clip.nvim"] = {
 	event = "VeryLazy",
