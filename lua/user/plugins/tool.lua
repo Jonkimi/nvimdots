@@ -35,6 +35,16 @@ tool["windwp/nvim-autopairs"] = {
 	-- this is equivalent to setup({}) function
 }
 
+tool["kylechui/nvim-surround"] = {
+	version = "^3.0.0", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+        require("nvim-surround").setup({
+            -- Configuration here, or leave empty to use defaults
+        })
+    end
+}
+
 tool["m4xshen/hardtime.nvim"] = {
 	lazy = false,
 	dependencies = { "MunifTanjim/nui.nvim" },
