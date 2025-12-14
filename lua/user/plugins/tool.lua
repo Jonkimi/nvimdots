@@ -26,16 +26,16 @@ tool["attilarepka/header.nvim"] = {
 --     },
 -- }
 
-tool["windwp/nvim-autopairs"] = {
-	event = "InsertEnter",
-	config = true,
-	-- opts = {
-	--     check_ts = true,
-	--     -- disable_filetype = { "TelescopePrompt" },
-	-- },
-	-- use opts = {} for passing setup options
-	-- this is equivalent to setup({}) function
-}
+-- tool["windwp/nvim-autopairs"] = {
+-- 	event = "InsertEnter",
+-- 	config = true,
+-- 	-- opts = {
+-- 	--     check_ts = true,
+-- 	--     -- disable_filetype = { "TelescopePrompt" },
+-- 	-- },
+-- 	-- use opts = {} for passing setup options
+-- 	-- this is equivalent to setup({}) function
+-- }
 
 tool["kylechui/nvim-surround"] = {
 	version = "^3.0.0", -- Use for stability; omit to use `main` branch for the latest features

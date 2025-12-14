@@ -107,6 +107,12 @@ local mappings = {
 			:with_noremap()
 			:with_silent()
 			:with_desc("tool: Toggle command panel"),
+		["n|<leader>bb"] = map_callback(function()
+				require("telescope.builtin").buffers()
+			end)
+			:with_noremap()
+			:with_silent()
+			:with_desc("tool: Find buffers"),
 		["n|<leader>fc"] = map_callback(function()
 				_telescope_collections(require("telescope.themes").get_dropdown())
 			end)

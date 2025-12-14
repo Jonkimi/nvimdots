@@ -52,6 +52,14 @@ settings["null_ls_deps"] = {
 	"black",
 }
 
+-- disalbe language server formatting
+-- 开启 block 后在 formatOnSave 时也会 block
+settings["server_formatting_block_list"] = {
+	html = true,
+	-- emmet_language_server = true,
+	-- tailwindcss  = true,
+}
+
 -- vim.notify("User settings loaded", vim.log.levels.INFO, { title = "user settings load" })
 
 return settings
