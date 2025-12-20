@@ -26,6 +26,7 @@ return {
 		"typescriptreact",
 		"typescript.tsx",
 	},
+
 	init_options = {
 		typescript = {
 			tsdk = typescript_path,
@@ -56,9 +57,9 @@ return {
 					enabled = true,
 					suppressWhenArgumentMatchesName = true,
 				},
-				variableTypes = {
-					enabled = true,
-				},
+				-- variableTypes = {
+				-- 	enabled = true,
+				-- },
 				parameterNames = { enabled = "all" },
 			},
 		},
@@ -83,9 +84,9 @@ return {
 					enabled = true,
 					suppressWhenArgumentMatchesName = true,
 				},
-				variableTypes = {
-					enabled = true,
-				},
+				-- variableTypes = {
+				-- 	enabled = true,
+				-- },
 				parameterNames = { enabled = "all" },
 			},
 		},
