@@ -2,7 +2,7 @@ local bind = require("keymap.bind")
 local map_callback = bind.map_callback
 
 -- delete nvim tree keymap
-vim.api.nvim_del_keymap("n", "<leader>nr")
+-- vim.api.nvim_del_keymap("n", "<leader>nr")
 
 local mappings = {
 	-- Custom: Save cursor position before visual selection and restore on <Esc>
@@ -14,15 +14,6 @@ local mappings = {
 			desc = "tool: Find Scope Buffers",
 		},
 	},
-	["n|<leader>nn"] = {
-		cmd = "<Cmd>HopNodes<CR>",
-		options = {
-			noremap = true,
-			silent = true,
-			desc = "Hopes Node Jump",
-		},
-	},
-	
 
 	-- flash
 	["o|r"] = {
