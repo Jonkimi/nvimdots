@@ -53,14 +53,15 @@ return {
 				propertyDeclarationTypes = {
 					enabled = true,
 				},
-				parameterTypes = {
-					enabled = true,
-					suppressWhenArgumentMatchesName = true,
-				},
+				-- parameterTypes = {
+				-- 	enabled = true,
+				-- 	suppressWhenArgumentMatchesName = true,
+				-- },
 				-- variableTypes = {
 				-- 	enabled = true,
 				-- },
-				parameterNames = { enabled = "all" },
+				-- parameterNames = { enabled = "all" },
+				 parameterNames = { enabled = "literals" },
 			},
 		},
 		typescript = {
@@ -80,14 +81,15 @@ return {
 				propertyDeclarationTypes = {
 					enabled = true,
 				},
-				parameterTypes = {
-					enabled = true,
-					suppressWhenArgumentMatchesName = true,
-				},
+				-- parameterTypes = {
+				-- 	enabled = true,
+				-- 	suppressWhenArgumentMatchesName = true,
+				-- },
 				-- variableTypes = {
 				-- 	enabled = true,
 				-- },
-				parameterNames = { enabled = "all" },
+				-- parameterNames = { enabled = "all" },
+				 parameterNames = { enabled = "literals" },
 			},
 		},
 	},
