@@ -17,7 +17,48 @@ tool["attilarepka/header.nvim"] = {
 		author = "Jonkimi",
 	},
 }
+tool["ThePrimeagen/harpoon"] = {
+	lazy = true,
+	event = "VeryLazy",
+	branch = "harpoon2",
+	config = function()
+		local harpoon = require("harpoon")
+		harpoon:setup()
 
+		-- 基础快捷键
+		-- <leader>a 标记当前文件
+		vim.keymap.set("n", "<leader>ba", function()
+			harpoon:list():add()
+		end, { desc = "Harpoon Add Buffer" })
+		-- <C-e> 查看标记列表 (UI)
+		vim.keymap.set("n", "<leader>0", function()
+			harpoon.ui:toggle_quick_menu(harpoon:list())
+		end, { desc = " toggle Harpoon UI" })
+
+		-- 1-4 核心键位跳转 (大神标准肌肉记忆)
+		vim.keymap.set("n", "<leader>1", function()
+			harpoon:list():select(1)
+		end, { desc = "Harpoon Mark 1" })
+		vim.keymap.set("n", "<leader>2", function()
+			harpoon:list():select(2)
+		end, { desc = "Harpoon Mark 2" })
+		vim.keymap.set("n", "<leader>3", function()
+			harpoon:list():select(3)
+		end, { desc = "Harpoon Mark 3" })
+		vim.keymap.set("n", "<leader>4", function()
+			harpoon:list():select(4)
+		end, { desc = "Harpoon Mark 4" })
+
+		-- 切换下一个/上一个标记文件
+		vim.keymap.set("n", "<leader>[", function()
+			harpoon:list():prev()
+		end, { desc = "Harpoon Previous Mark" })
+		vim.keymap.set("n", "<leader>]", function()
+			harpoon:list():next()
+		end, { desc = "Harpoon Next Mark" })
+	end,
+	dependencies = { "nvim-lua/plenary.nvim" },
+}
 -- tool["altermo/ultimate-autopair.nvim"] = {
 --     event={'InsertEnter','CmdlineEnter'},
 --     branch='v0.6', --recommended as each new version will have breaking changes
@@ -39,12 +80,12 @@ tool["attilarepka/header.nvim"] = {
 
 tool["kylechui/nvim-surround"] = {
 	version = "^3.0.0", -- Use for stability; omit to use `main` branch for the latest features
-    event = "VeryLazy",
-    config = function()
-        require("nvim-surround").setup({
-            -- Configuration here, or leave empty to use defaults
-        })
-    end
+	event = "VeryLazy",
+	config = function()
+		require("nvim-surround").setup({
+			-- Configuration here, or leave empty to use defaults
+		})
+	end
 }
 
 tool["m4xshen/hardtime.nvim"] = {
