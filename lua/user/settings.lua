@@ -26,6 +26,8 @@ settings["treesitter_deps"] = {
 	"vue",
 	"xml",
 	"regex",
+	"css",
+	"scss",
 }
 
 -- override default lsp deps
