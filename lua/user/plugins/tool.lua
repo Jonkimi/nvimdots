@@ -27,15 +27,19 @@ tool["ThePrimeagen/harpoon"] = {
 
 		-- 基础快捷键
 		-- <leader>a 标记当前文件
-		vim.keymap.set("n", "<leader>ba", function()
+		vim.keymap.set("n", "<leader>ha", function()
 			harpoon:list():add()
 		end, { desc = "Harpoon Add Buffer" })
+		vim.keymap.set("n", "<leader>hc", function()
+			harpoon:clear()
+		end, { desc = "Harpoon Clear Buffers" })
 		-- <C-e> 查看标记列表 (UI)
 		vim.keymap.set("n", "<leader>0", function()
 			harpoon.ui:toggle_quick_menu(harpoon:list())
-		end, { desc = " toggle Harpoon UI" })
+		end, { desc = "Toggle Harpoon UI" })
 
 		-- 1-4 核心键位跳转 (大神标准肌肉记忆)
+		-- 修改实现为 for loop AI!
 		vim.keymap.set("n", "<leader>1", function()
 			harpoon:list():select(1)
 		end, { desc = "Harpoon Mark 1" })
