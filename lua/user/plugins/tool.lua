@@ -39,19 +39,11 @@ tool["ThePrimeagen/harpoon"] = {
 		end, { desc = "Toggle Harpoon UI" })
 
 		-- 1-4 核心键位跳转 (大神标准肌肉记忆)
-		-- 修改实现为 for loop AI!
-		vim.keymap.set("n", "<leader>1", function()
-			harpoon:list():select(1)
-		end, { desc = "Harpoon Mark 1" })
-		vim.keymap.set("n", "<leader>2", function()
-			harpoon:list():select(2)
-		end, { desc = "Harpoon Mark 2" })
-		vim.keymap.set("n", "<leader>3", function()
-			harpoon:list():select(3)
-		end, { desc = "Harpoon Mark 3" })
-		vim.keymap.set("n", "<leader>4", function()
-			harpoon:list():select(4)
-		end, { desc = "Harpoon Mark 4" })
+		for i = 1, 4 do
+			vim.keymap.set("n", "<leader>" .. i, function()
+				harpoon:list():select(i)
+			end, { desc = "Harpoon Mark " .. i })
+		end
 
 		-- 切换下一个/上一个标记文件
 		vim.keymap.set("n", "<leader>[", function()
