@@ -10,7 +10,7 @@ local format_timeout = settings.format_timeout
 
 vim.api.nvim_create_user_command("Format", function()
 	M.format({
-		timeout = format_timeout,
+		timeout_ms = format_timeout,
 		filter = M.format_filter,
 	})
 end, {})
