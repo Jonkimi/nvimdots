@@ -68,6 +68,7 @@ return {
 			tsserver = {
 				-- fix https://github.com/microsoft/vscode/issues/212731
 				-- make tsserver memory limit greater than 4GB
+				-- https://github.com/yioneko/vtsls/blob/main/packages/service/configuration.schema.json
 				maxTsServerMemory = 8192,
 				nodePath = "node"
 			},
