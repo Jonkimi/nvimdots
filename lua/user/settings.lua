@@ -39,30 +39,36 @@ settings["lsp_deps"] = function(defaults)
 		"jsonls",
 		"lua_ls",
 		"pylsp",
+		-- "basedpyright", 安装报错，直接 npm install -g basedpyright
+		-- "ruff",
 		"tailwindcss",
 		-- "denols", -- typescript language server
 		-- "ts_ls",
 		-- "vuels", -- vetur
 		"vtsls",
-		"volar", -- volar 2.2.12
-		-- "vue_ls", -- volar 3
+		-- "volar",
+		"volar@3.0.8", -- volar 2.2.12
+		-- "vue_ls@3.0.8", -- volar 3
 		"emmet_language_server",
 	}
 end
 
 -- add null-ls deps
 settings["null_ls_deps"] = {
-	"black",
+	-- "black",
+	-- "ruff"
 }
 
 -- disalbe language server formatting
 -- 开启 block 后在 formatOnSave 时也会 block
 settings["server_formatting_block_list"] = {
 	html = true,
+	-- pylsp = true,
 	-- emmet_language_server = true,
 	-- tailwindcss  = true,
 }
 
+settings["format_timeout"] = 4000
 -- vim.notify("User settings loaded", vim.log.levels.INFO, { title = "user settings load" })
 
 return settings
