@@ -32,7 +32,8 @@ local mappings = {
 		-- Plugin: toggleterm
 		-- <Esc> conflict with shortcut of return to files panel in lazygit
 		-- <Esc><Esc> is not simple
-		["t|<C-q>"] = map_cmd([[<C-\><C-n>]]):with_noremap():with_silent(), -- switch to normal mode in terminal.
+		-- ["t|<C-q>"] = map_cmd([[<C-\><C-n>]]):with_noremap():with_silent(), -- switch to normal mode in terminal.
+		["t|<Esc><Esc>"] = map_cmd([[<C-\><C-n>]]):with_noremap():with_silent(), -- switch to normal mode in terminal.
 		["n|<C-\\>"] = map_cmd('<Cmd>execute (v:count > 0 ? v:count : "") . "ToggleTerm direction=horizontal"<CR>')
 			:with_noremap()
 			:with_silent()
