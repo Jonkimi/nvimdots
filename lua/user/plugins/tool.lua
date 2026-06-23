@@ -145,4 +145,13 @@ tool["HakonHarnes/img-clip.nvim"] = {
 		-- { "<leader>p", "<cmd>PasteImage<cr>", desc = "Paste image from system clipboard" },
 	},
 }
+
+tool["keaising/im-select.nvim"] = {
+	config = function()
+		require("im_select").setup({
+			default_im_select  = "com.apple.keylayout.ABC",
+			default_command = "/usr/local/bin/im-select"
+		})
+	end
+}
 return tool
