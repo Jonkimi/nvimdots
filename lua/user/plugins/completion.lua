@@ -1,6 +1,6 @@
 local completion = {}
 
-completion["Exafunction/windsurf.nvim"] = {
+completion["Jonkimi/windsurf.nvim"] = {
 	lazy = true,
 	event = "VeryLazy",
 	-- cmd = { "Codeium" },
@@ -69,7 +69,7 @@ completion["Exafunction/windsurf.nvim"] = {
 	end,
 }
 
-completion["yetone/avante.nvim"] = {
+completion["Jonkimi/avante.nvim"] = {
 	--   "yetone/avante.nvim",
 	-- if you want to build from source then do `make BUILD_FROM_SOURCE=true`
 	-- ⚠️ must add this setting! ! !
